@@ -953,7 +953,7 @@ span {
     }
 
     .home .profession-box .profession:nth-child(1) {
-        transform: rotate(-90deg) translate(-120px, -220px);
+        transform: rotate(-90deg) translate(-111px, -231px);
     }
 
     .home .profession-box .profession:nth-child(2) {
@@ -961,11 +961,11 @@ span {
     }
 
     .home .profession-box .profession:nth-child(3) {
-        transform: rotate(90deg) translate(-105px, -440px);
+        transform: rotate(90deg) translate(-84px, -425px);
     }
 
     .home .profession-box .profession:nth-child(4) {
-        transform: rotate(180deg) translate(-210px, -335px);
+        transform: rotate(180deg) translate(-216px, -335px);
     }
 
     .contact form .input-box input {
