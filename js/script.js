@@ -75,3 +75,36 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+//contact form submission
+const form = document.getElementById('contact-form');
+const toast = document.getElementById('toast');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch('https://formspree.io/f/xrejegaz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        form.reset();
+
+        // show toast
+        toast.classList.add('show');
+
+        // hide after 3 sec
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+
+    } else {
+        alert("Something went wrong!");
+    }
+});
